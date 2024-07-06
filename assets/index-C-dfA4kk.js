@@ -151,20 +151,14 @@ invalid:ring-offset-2
   focus:ring-offset-2
   focus:ring-indigo-500
 `,KS=Cr.div`
-
 inline-flex
 justify-center
 min-w-min
-
 py-1
-
-
 text-xs
 text-nowrap
 font-medium
-
 cursor-pointer
-
 rounded-full
 text-gray-700
 bg-gray-200
@@ -175,7 +169,6 @@ ${e=>e.$selected?"bg-indigo-200 text-indigo-700":"bg-gray-200 text-gray-700"}
 has-[:checked]:bg-indigo-200
 has-[:checked]:text-indigo-700
 has-[:checked]:hover:bg-indigo-300
-
 `,wd=({value:e,groupName:t,inputType:n,defaultChecked:r,children:o,className:a,onChange:l,onClick:u})=>O.jsxs(KS,{htmlFor:`toggle-${e}`,className:`${a} relative overflow-hidden`,$as:"label",onClick:u,children:[O.jsx("input",{type:n,className:"absolute h-4 w-4 -left-4 -top-4 ",defaultChecked:r,name:t,value:e,id:`toggle-${e}`,onChange:l}),o]}),_4=Cr.button`
 bg-gray-800
 hover:bg-gray-900
@@ -183,7 +176,7 @@ text-white
 font-medium p-1
 rounded
 text-xs
-`,w4=({showFilterForm:e})=>{const t=y2();return O.jsx("div",{children:t.map(({id:n,caption:r,count:o})=>{let a=r;return o&&(a=`${r} (${o})`),O.jsx(KS,{className:"text-xs",$selected:!0,onClick:()=>e(),children:O.jsx("span",{className:"px-4 text-nowrap",children:a})},n)})})},x4=()=>{const{dateRanges:e,tagCategories:t,customDate:n,allVenues:r}=qx(),o=zw(),a=D.useRef(),l=u=>{if(!a.current)return;u.target.value=="customDate"?(a.current.disabled=!1,a.current.focus()):a.current.disabled=!0};return O.jsx(O.Fragment,{children:O.jsxs("div",{className:"mb-2 px-4 min bg-white overflow-hidden flex-1  min-h-0",children:[O.jsx("h2",{className:"font-semibold text-sm text-center",children:"Filters"}),O.jsx(RT,{method:"get",onChange:u=>{u.currentTarget.checkValidity()&&o(u.currentTarget)},children:O.jsxs("div",{className:"flex flex-col ",children:[O.jsx("h3",{className:"text-sm font-medium",children:"When"}),O.jsx("div",{className:"flex flex-row items-baseline flex-wrap justify-start gap-1",children:Object.values(e).map(({id:u,caption:f,selected:d,ui:p})=>{var m;return O.jsxs(wd,{groupName:"dateRange",inputType:"radio",value:u,defaultChecked:d,onChange:l,caption:f,children:[p=="datetime"&&O.jsx(y4,{type:"date",ref:a,required:!0,className:"peer datetime",id:"customDate",disabled:!d,name:"customDate",onFocus:g=>{g.target.showPicker()},defaultValue:((m=n||yn())==null?void 0:m.format("YYYY-MM-DD"))||""},u),O.jsx("span",{className:"px-4 text-nowrap peer-[.datetime]:hidden peer-[.datetime]:peer-disabled:inline",children:f})]},u)})}),t.map(({id:u,caption:f,values:d})=>O.jsxs(O.Fragment,{children:[O.jsx("h3",{className:"text-sm font-medium",children:f},u),O.jsx("div",{className:"flex flex-row items-baseline  flex-wrap justify-start gap-1",children:d.map(({value:p,id:m,selected:g,count:y})=>O.jsx(wd,{value:m,defaultChecked:g,groupName:"tags",inputType:"checkbox",children:O.jsxs("span",{className:"px-4 text-nowrap",children:[p," (",y,")"]})},m))},`div-${u}`)]})),r&&r.length>0&&O.jsxs(O.Fragment,{children:[O.jsx("h3",{className:"text-sm font-medium",children:"Venues"}),O.jsx("div",{className:"flex flex-row items-baseline  flex-wrap justify-start gap-1",children:r.map(({name:u,id:f,selected:d,count:p})=>O.jsx(wd,{value:f,defaultChecked:d,groupName:"venue",inputType:"radio",children:O.jsxs("span",{className:"px-4 text-nowrap",children:[u," (",p,")"]})},f))})]})]})})]})})},S4=()=>{const[e,t]=D.useState(!1);return O.jsxs(v4,{$expanded:e,children:[e&&O.jsx(x4,{}),O.jsxs("div",{className:"flex justify-between items-start p-1",children:[O.jsx("div",{children:!e&&O.jsx(w4,{showFilterForm:()=>t(!0)})}),O.jsx(_4,{onClick:()=>t(!e),children:e?"close":"filters"})]})]})};um.div`
+`,w4=({showFilterForm:e})=>{const t=y2();return O.jsx("div",{children:t.map(({id:n,caption:r,count:o})=>{let a=r;return o&&(a=`${r} (${o})`),O.jsx(KS,{className:"text-xs",$selected:!0,onClick:()=>e(),children:O.jsx("span",{className:"px-4 text-nowrap",children:a})},n)})})},x4=()=>{const{dateRanges:e,tagCategories:t,customDate:n,allVenues:r}=qx(),o=zw(),a=D.useRef(),l=u=>{if(!a.current)return;u.target.value=="customDate"?(a.current.disabled=!1,a.current.focus()):a.current.disabled=!0};return O.jsx(O.Fragment,{children:O.jsxs("div",{className:"mb-2 px-4 min bg-white overflow-hidden flex-1  min-h-0",children:[O.jsx("h2",{className:"font-semibold text-sm text-center",children:"Filters"}),O.jsx(RT,{method:"get",onChange:u=>{u.currentTarget.checkValidity()&&o(u.currentTarget)},children:O.jsxs("div",{className:"flex flex-col ",children:[O.jsx("h3",{className:"text-sm font-medium",children:"When"}),O.jsx("div",{className:"flex flex-row items-baseline flex-wrap justify-start gap-1",children:Object.values(e).map(({id:u,caption:f,selected:d,ui:p})=>{var m;return O.jsxs(wd,{groupName:"dateRange",inputType:"radio",value:u,defaultChecked:d,onChange:l,caption:f,children:[p=="datetime"&&O.jsx(y4,{type:"date",ref:a,required:!0,className:"peer datetime",id:"customDate",disabled:!d,name:"customDate",onFocus:g=>{g.target.showPicker()},defaultValue:((m=n||yn())==null?void 0:m.format("YYYY-MM-DD"))||""},u),O.jsx("span",{className:"px-4 text-nowrap peer-[.datetime]:hidden peer-[.datetime]:peer-disabled:inline",children:f})]},u)})}),t.map(({id:u,caption:f,values:d})=>O.jsxs(O.Fragment,{children:[O.jsx("h3",{className:"text-sm font-medium",children:f},u),O.jsx("div",{className:"flex flex-row items-baseline  flex-wrap justify-start gap-1",children:d.map(({value:p,id:m,selected:g,count:y})=>O.jsx(wd,{value:m,defaultChecked:g,groupName:"tags",inputType:"checkbox",children:O.jsxs("span",{className:"px-4 text-nowrap",children:[p," (",y,")"]})},m))},`div-${u}`)]})),r&&r.length>0&&O.jsxs(O.Fragment,{children:[O.jsx("h3",{className:"text-sm font-medium",children:"Venues"}),O.jsx("div",{className:"flex flex-row items-baseline  flex-wrap justify-start gap-1",children:r.map(({name:u,id:f,selected:d,count:p})=>O.jsx(wd,{value:f,defaultChecked:d,groupName:"venue",inputType:"checkbox",children:O.jsxs("span",{className:"px-4 text-nowrap",children:[u," (",p,")"]})},f))})]})]})})]})})},S4=()=>{const[e,t]=D.useState(!1);return O.jsxs(v4,{$expanded:e,children:[e&&O.jsx(x4,{}),O.jsxs("div",{className:"flex justify-between items-start p-1",children:[O.jsx("div",{children:!e&&O.jsx(w4,{showFilterForm:()=>t(!0)})}),O.jsx(_4,{onClick:()=>t(!e),children:e?"close":"filters"})]})]})};um.div`
   display: flex;
   justify-content: center;
 `;const G_=Cr.a`text-blue-600 hover:underline visited:text-purple-600 inline-flex items-baseline`,b4=Cr.aside`flex flex-col`,Y_=Cr.div`
