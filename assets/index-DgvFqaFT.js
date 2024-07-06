@@ -130,7 +130,7 @@ shadow
 transition-[max-height]
 flex
 flex-col
-${e=>e.$expanded?"":"max-h-12"}
+${e=>e.$expanded?"max-h-80":"max-h-12"}
 bg-white
 overflow-none
 `,y4=Cr.input`
